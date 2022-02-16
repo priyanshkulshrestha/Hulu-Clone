@@ -20,6 +20,7 @@ export default function Home({results}) {
   )
 }
 
+//server side render
 export async function getServerSideProps(context){
   const genre = context.query.genre;
 
@@ -29,7 +30,7 @@ export async function getServerSideProps(context){
 
   return {
     props: {
-      results: request.results
-    }
-  }
+      results: request.results,
+    },
+  };
 }
